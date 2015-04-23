@@ -1,16 +1,16 @@
 #!/bin/bash
 
-Git_directory="https://github.com/qihongxu/ninja-sample.git"
+#Git_directory="https://github.com/qihongxu/ninja-sample.git"
 
 echo "Running vagrant configuration script"
 
 echo "Installing Git"
 sudo yum install git -y
-cd /vagrant
-if [ ! -d "app" ]; then
-git clone $Git_directory
-fi
-cd /home/vagrant
+#cd /vagrant
+#if [ ! -d "app" ]; then
+#git clone $Git_directory
+#fi
+#cd /home/vagrant
 
 echo "Installing Docker"
 sudo yum install docker -y
