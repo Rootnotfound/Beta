@@ -3,7 +3,6 @@
 #Git_directory="https://github.com/qihongxu/ninja-sample.git"
 
 echo "Running vagrant configuration script"
-
 #echo "Installing Git"
 #sudo yum install git -y
 #cd /vagrant
