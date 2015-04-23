@@ -1,8 +1,5 @@
-#Sample Dockerfile for a Java webapp running on Tomcat + Apache
-
 FROM centos:centos7
 
-#MAINTAINER Chris Birchall (chris.birchall@gmail.com)
 
 # Java installation.
 #
