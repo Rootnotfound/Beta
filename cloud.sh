@@ -19,6 +19,6 @@ sudo rm /var/run/docker.pid
 fi
 
 echo "Starting new docker container"
-cd /
+cd ..
 sudo docker build -t=$ImageName vagrant
 sudo docker run -d --name $containerName -p=\"$hostIP:80\" $ImageName 
