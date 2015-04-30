@@ -18,5 +18,5 @@ fi
 
 echo "Starting new docker container"
 cd /
-sudo docker build -t=$ImageName vagrant
+sudo docker build -t=$ImageName --no-cache vagrant
 sudo docker run -d --name $containerName -p=\"$hostIP:80\" $ImageName 
