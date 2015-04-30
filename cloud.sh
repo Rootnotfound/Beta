@@ -14,11 +14,11 @@ echo "Killing previous docker container"
 sudo docker kill $containerName
 sudo docker rm $containerName
 
-if [ -f /var/run/docker.pid ]; then
-sudo rm /var/run/docker.pid
-fi
+#if [ -f /var/run/docker.pid ]; then
+#sudo rm /var/run/docker.pid
+#fi
 
 echo "Starting new docker container"
 cd ..
-sudo docker build -t=$ImageName vagrant
+sudo docker build -t=$ImageName ninja_publish
 sudo docker run -d --name $containerName -p=\"$hostIP:80\" $ImageName 
