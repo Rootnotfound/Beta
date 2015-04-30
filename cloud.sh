@@ -4,6 +4,8 @@ containerName="myapp"
 hostIP=1234
 ImageName="webapp"
 
+ssh -t 127.0.0.1 "sudo command"
+
 sudo docker -d &
 sleep 5
 
@@ -18,5 +20,5 @@ fi
 
 echo "Starting new docker container"
 cd /
-sudo docker build -t=$ImageName --no-cache vagrant
+sudo docker build -t=$ImageName vagrant
 sudo docker run -d --name $containerName -p=\"$hostIP:80\" $ImageName 
