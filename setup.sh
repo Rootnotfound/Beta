@@ -28,6 +28,12 @@ mkdir jdk
 cd jdk
 sudo wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u40-b26/jdk-8u40-linux-x64.rpm
 fi
+
+cd /vagrant
+sudo chmod +rx run.sh
+sudo chmod +rx stop.sh
+
+
 cd /home/vagrant
 
 #echo "Starting Docker deamon"
