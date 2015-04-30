@@ -4,8 +4,8 @@
 
 echo "Running vagrant configuration script"
 
-#echo "Installing Git"
-#sudo yum install git -y
+echo "Installing Git"
+sudo yum install git -y
 #cd /vagrant
 #if [ ! -d "app" ]; then
 #git clone $Git_directory

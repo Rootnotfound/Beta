@@ -2,6 +2,8 @@
 ImageName="webapp"
 hostIP=1234
 
+ssh -t 127.0.0.1 "sudo command"
+
 sudo docker -d &
 sleep 5
 cd /
