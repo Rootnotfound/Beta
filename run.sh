@@ -23,6 +23,8 @@ elif [ $1 == "-r" ]; then
 		cd /vagrant
 elif [ $1 == "-s" ]; then
 		echo "stop and romve the docker container"
+		sudo docker -d &
+		sleep 5
 		sudo docker kill $containerName
 		sudo docker rm $containerName
 
