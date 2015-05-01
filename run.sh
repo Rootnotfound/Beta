@@ -9,10 +9,10 @@ if [ $# != 1 ]; then
 	echo ""
 	echo "Options:"
 	echo "	-r  		build and run the docker container"
-	echo "	-r  		stop and remove the docker container"
+	echo "	-s 			stop and remove the docker container"
+	echo "	-h  		help"
 	exit
-else
-	if [ $1 == "-r" ]; then	
+elif [ $1 == "-r" ]; then	
 		echo "build and start the docker container"
 		sudo docker -d &
 		sleep 5
@@ -21,8 +21,7 @@ else
 		sudo docker build -t=$ImageName vagrant
 		sudo docker run -d --name $containerName -p=\"$hostIP:80\" $ImageName 
 		cd /vagrant
-else
-	if [ $1 == "-s" ]; then
+elif [ $1 == "-s" ]; then
 		echo "stop and romve the docker container"
 		sudo docker kill $containerName
 		sudo docker rm $containerName
@@ -30,14 +29,20 @@ else
 		if [ -f /var/run/docker.pid ]; then
 		sudo rm /var/run/docker.pid
 		fi
+elif [ $1 == "-h" ]; then
+	echo "Usage: ./run.sh [OPTIONS]"
+	echo ""
+	echo "Options:"
+	echo "	-r  		build and run the docker container"
+	echo "	-s  		stop and remove the docker container"
+	echo "	-h  		help"
+	exit
 else 
 	echo "Usage: ./run.sh [OPTIONS]"
-	echo "\n\n"
-	echo "Options:\n"
-	echo "	-r  		build and run the docker container\n"
-	echo "	-r  		stop and remove the docker container\n"
+	echo ""
+	echo "Options:"
+	echo "	-r  		build and run the docker container"
+	echo "	-s  		stop and remove the docker container"
+	echo "	-h  		help"
 	exit
-fi
-fi
-fi
 fi
