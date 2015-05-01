@@ -31,10 +31,6 @@ fi
 
 cd /vagrant
 sudo chmod +rx run.sh
-sudo chmod +rx stop.sh
-
-
-cd /home/vagrant
 
 #echo "Starting Docker deamon"
 #sudo nonhup docker -d &
