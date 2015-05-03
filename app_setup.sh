@@ -54,5 +54,3 @@ sed -i -e "s/olddockerImageName=$olddockerImageName/olddockerImageName=$dockerIm
 sed -i -e "s/oldcontainerName=$oldcontainerName/oldcontainerName=$containerName/g" app_setup.sh
 sed -i -e "s/oldappFolderName=$oldappFolderName/oldappFolderName=$appFolderName/g" app_setup.sh
 rm app_setup.sh-e
-
-`
